@@ -1,0 +1,44 @@
+<!doctype html>
+<!-- TOPIC 02: TEXT AND SEMANTIC HTML
+     THEORY:
+     Headings describe hierarchy: h1 is the main page heading, then h2, h3, etc.
+     Use paragraphs for paragraphs, strong for importance, and em for emphasis.
+     Semantic elements describe purpose: header, nav, main, section, article, aside, footer.
+     Semantic HTML improves readability, accessibility, and maintainability. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semantic HTML Example</title>
+</head>
+<body>
+  <!-- EXAMPLE 1: Logical heading structure -->
+  <header>
+    <h1>Student Learning Hub</h1>
+    <p>Learn a little every day.</p>
+  </header>
+
+  <!-- EXAMPLE 2: Navigation and main content -->
+  <nav aria-label="Main navigation">
+    <a href="#lessons">Lessons</a>
+    <a href="#about">About</a>
+  </nav>
+
+  <main>
+    <section id="lessons">
+      <h2>Today's Lessons</h2>
+      <article>
+        <h3>HTML Foundations</h3>
+        <p>HTML gives content its <strong>structure</strong>.</p>
+        <p><em>Practice</em> by creating your own page.</p>
+      </article>
+    </section>
+    <section id="about">
+      <h2>About this page</h2>
+      <p>This is a semantic page structure.</p>
+    </section>
+  </main>
+
+  <footer><small>Training example — replace with your own footer.</small></footer>
+</body>
+</html>

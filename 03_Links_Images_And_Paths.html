@@ -1,0 +1,29 @@
+<!doctype html>
+<!-- TOPIC 03: LINKS, IMAGES AND PATHS
+     THEORY:
+     The <a> element creates a link; href tells the browser where to go.
+     The <img> element displays an image; src gives its path and alt describes it.
+     Relative paths point to files near this document; absolute URLs include a full address.
+     Write useful alt text for meaningful images; use alt="" for purely decorative images. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Links and Images</title>
+</head>
+<body>
+  <!-- EXAMPLE 1: Internal and external links -->
+  <p><a href="#gallery">Jump to gallery</a></p>
+  <p><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></p>
+
+  <!-- EXAMPLE 2: Local image (create an images folder and add classroom.jpg) -->
+  <img src="images/classroom.jpg" alt="Students learning in a classroom" width="320">
+
+  <!-- EXAMPLE 3: Image with a remote source (internet required) -->
+  <section id="gallery">
+    <h2>Learning Gallery</h2>
+    <img src="https://placehold.co/320x180?text=Practice+Every+Day"
+         alt="Placeholder banner saying Practice Every Day" width="320">
+  </section>
+</body>
+</html>

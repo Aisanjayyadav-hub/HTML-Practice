@@ -1,0 +1,51 @@
+<!doctype html>
+<!-- TOPIC 05: FORMS AND INPUT TYPES
+     THEORY:
+     A form collects user input. A label connected by for/id helps users and assistive tech.
+     name identifies a submitted field; required, type, min, max and pattern can add browser validation.
+     Client-side validation improves usability but is not a substitute for server-side validation. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+</head>
+<body>
+  <!-- EXAMPLE 1: Text, email and password inputs -->
+  <form action="#" method="get">
+    <label for="fullName">Full name:</label>
+    <input id="fullName" name="fullName" type="text" autocomplete="name" required>
+    <br><br>
+
+    <label for="email">Email:</label>
+    <input id="email" name="email" type="email" autocomplete="email" required>
+    <br><br>
+
+    <label for="password">Password:</label>
+    <input id="password" name="password" type="password" minlength="8" required>
+    <br><br>
+
+    <!-- EXAMPLE 2: Radio, checkbox, select, and date -->
+    <fieldset>
+      <legend>Course preferences</legend>
+      <label><input type="radio" name="mode" value="online" required> Online</label>
+      <label><input type="radio" name="mode" value="classroom"> Classroom</label>
+      <br>
+      <label><input type="checkbox" name="updates" value="yes"> Send course updates</label>
+      <br>
+      <label for="course">Choose a course:</label>
+      <select id="course" name="course">
+        <option value="html-css">HTML & CSS</option>
+        <option value="javascript">JavaScript</option>
+      </select>
+      <br>
+      <label for="startDate">Preferred start date:</label>
+      <input id="startDate" name="startDate" type="date">
+    </fieldset>
+
+    <!-- EXAMPLE 3: Submit -->
+    <button type="submit">Register</button>
+    <button type="reset">Reset</button>
+  </form>
+</body>
+</html>

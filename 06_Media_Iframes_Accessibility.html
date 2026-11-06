@@ -1,0 +1,44 @@
+<!doctype html>
+<!-- TOPIC 06: MEDIA, IFRAMES AND ACCESSIBILITY BASICS
+     THEORY:
+     Use audio/video controls so users can play media. Provide captions/transcripts when needed.
+     An iframe embeds another page; only embed trusted content and give it a descriptive title.
+     Accessibility includes meaningful alt text, labels, keyboard access, sufficient contrast,
+     and semantic elements. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media and Accessibility</title>
+</head>
+<body>
+  <!-- EXAMPLE 1: Video element (replace demo.mp4 with your own media file) -->
+  <h2>Training video</h2>
+  <video controls width="480">
+    <source src="demo.mp4" type="video/mp4">
+    Your browser does not support the video element.
+  </video>
+
+  <!-- EXAMPLE 2: Audio element (replace lesson.mp3 with your own file) -->
+  <h2>Audio lesson</h2>
+  <audio controls>
+    <source src="lesson.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- EXAMPLE 3: Embedded page; remote sites may block iframe embedding -->
+  <h2>Reference</h2>
+  <iframe
+    src="https://example.com"
+    title="Example reference website"
+    width="480"
+    height="240"
+    loading="lazy"></iframe>
+
+  <p><a href="#main-content">Skip to main content</a></p>
+  <main id="main-content">
+    <h2>Accessibility check</h2>
+    <p>Can you navigate every interactive control using only the keyboard?</p>
+  </main>
+</body>
+</html>

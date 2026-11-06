@@ -1,0 +1,47 @@
+<!doctype html>
+<!-- TOPIC 14: RESPONSIVE DESIGN AND MEDIA QUERIES
+     THEORY:
+     Responsive design helps pages work on phones, tablets, and desktops.
+     Start with the viewport meta tag, flexible widths, responsive images, and content-first breakpoints.
+     Media queries apply CSS only when conditions match.
+     Test with browser DevTools device emulation and by resizing the window. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Design</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; }
+    .layout { display: grid; grid-template-columns: 240px 1fr; gap: 1rem; padding: 1rem; }
+    .sidebar, .content { padding: 1rem; border-radius: 10px; background: #f0f4f8; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* EXAMPLE 1: Change the layout on smaller screens */
+    @media (max-width: 700px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    /* EXAMPLE 2: Adjust text and spacing for very narrow screens */
+    @media (max-width: 420px) {
+      .layout { padding: 0.5rem; }
+      h1 { font-size: 1.6rem; }
+    }
+
+    /* EXAMPLE 3: Respect users who prefer reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar"><h2>Menu</h2><p>Links and filters go here.</p></aside>
+    <main class="content">
+      <h1>Responsive Learning Page</h1>
+      <p>Resize the browser. At 700px and below, the sidebar moves above the content.</p>
+      <img src="https://placehold.co/900x260?text=Flexible+Image" alt="Example flexible banner image">
+    </main>
+  </div>
+</body>
+</html>

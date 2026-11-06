@@ -1,0 +1,37 @@
+<!doctype html>
+<!-- TOPIC 04: LISTS AND TABLES
+     THEORY:
+     ul creates a bulleted list; ol creates a numbered list; li is a list item.
+     Tables are for tabular data, not for page layout. Use caption, thead, tbody, th and td
+     to make data easier to understand, including with assistive technology. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lists and Tables</title>
+  <style>
+    table { border-collapse: collapse; width: 100%; max-width: 520px; }
+    th, td { border: 1px solid #888; padding: 8px; text-align: left; }
+    thead { background: #eeeeee; }
+  </style>
+</head>
+<body>
+  <!-- EXAMPLE 1: Unordered list -->
+  <h2>Tools to learn</h2>
+  <ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+
+  <!-- EXAMPLE 2: Ordered steps -->
+  <h2>Build a page</h2>
+  <ol><li>Plan content</li><li>Write HTML</li><li>Style with CSS</li></ol>
+
+  <!-- EXAMPLE 3: Accessible data table -->
+  <table>
+    <caption>Weekly practice plan</caption>
+    <thead><tr><th scope="col">Day</th><th scope="col">Topic</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Monday</th><td>HTML</td></tr>
+      <tr><th scope="row">Tuesday</th><td>CSS</td></tr>
+    </tbody>
+  </table>
+</body>
+</html>

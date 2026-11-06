@@ -1,0 +1,39 @@
+<!doctype html>
+<!-- TOPIC 08: COLORS, UNITS, BACKGROUNDS AND BORDERS
+     THEORY:
+     CSS colors can be written as named colors, hex, rgb(), or hsl().
+     px is fixed-size; rem scales from the root font size; % depends on context;
+     vw/vh are relative to viewport dimensions. Prefer flexible units for responsive layouts.
+     Background and border properties help separate content visually. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Colors and Units</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2rem; }
+    /* EXAMPLE 1: Different color formats */
+    .hex-box { color: #ffffff; background-color: #2457a7; padding: 1rem; }
+    .rgb-box { color: rgb(20, 40, 60); background: rgb(220, 240, 255); padding: 1rem; }
+
+    /* EXAMPLE 2: Units */
+    .responsive-box { width: 80%; max-width: 600px; font-size: 1.1rem; }
+
+    /* EXAMPLE 3: Border and gradient */
+    .card {
+      border: 2px solid #345;
+      border-radius: 12px;
+      padding: 1rem;
+      background: linear-gradient(120deg, #f4f8ff, #e0f2f1);
+    }
+  </style>
+</head>
+<body>
+  <div class="hex-box">Hex color example</div>
+  <p class="rgb-box">RGB color example</p>
+  <div class="card responsive-box">
+    <h2>Flexible card</h2>
+    <p>Try resizing the browser window to observe the width behaviour.</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<!-- TOPIC 13: CSS GRID LAYOUT
+     THEORY:
+     CSS Grid is a two-dimensional layout system for rows and columns.
+     `grid-template-columns` defines column tracks; `gap` defines spacing.
+     `fr` distributes available space. `repeat()` and `minmax()` make flexible grids.
+     Grid is useful for dashboards, galleries, and page-level layouts. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid Practice</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 1rem; }
+    /* EXAMPLE 1: Three equal columns */
+    .simple-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .tile { padding: 24px; background: #e4efff; border-radius: 8px; }
+
+    /* EXAMPLE 2: Responsive auto-fit cards */
+    .responsive-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .card { padding: 1rem; border: 1px solid #aaa; border-radius: 10px; }
+
+    /* EXAMPLE 3: Named page areas */
+    .page { display: grid; grid-template-areas: "header header" "sidebar main";
+            grid-template-columns: 180px 1fr; gap: 10px; margin-top: 2rem; }
+    .header { grid-area: header; background: #d8e8d8; padding: 12px; }
+    .sidebar { grid-area: sidebar; background: #f5e7ce; padding: 12px; }
+    .main { grid-area: main; background: #eee; padding: 12px; }
+    @media (max-width: 520px) {
+      .simple-grid { grid-template-columns: 1fr; }
+      .page { grid-template-areas: "header" "sidebar" "main"; grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="simple-grid"><div class="tile">One</div><div class="tile">Two</div><div class="tile">Three</div></div>
+  <div class="responsive-grid">
+    <article class="card"><h2>Design</h2><p>Plan the layout.</p></article>
+    <article class="card"><h2>Build</h2><p>Write the structure.</p></article>
+    <article class="card"><h2>Test</h2><p>Check every screen.</p></article>
+  </div>
+  <div class="page"><header class="header">Header</header><aside class="sidebar">Sidebar</aside><main class="main">Main content</main></div>
+</body>
+</html>

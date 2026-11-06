@@ -1,0 +1,40 @@
+<!doctype html>
+<!-- TOPIC 09: THE BOX MODEL
+     THEORY:
+     Every element is laid out as content, padding, border, and margin.
+     Padding is space inside the border; margin is space outside the border.
+     With content-box, width applies to content only. With border-box, width includes
+     content + padding + border. Many projects use `box-sizing: border-box` globally. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Box Model</title>
+  <style>
+    /* Recommended reset for predictable sizing */
+    * { box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; }
+    /* EXAMPLE 1: Padding and border */
+    .box-one {
+      width: 260px;
+      padding: 20px;
+      border: 4px solid steelblue;
+      background: #eef6ff;
+    }
+    /* EXAMPLE 2: Margin creates outside space */
+    .box-two {
+      width: 260px;
+      margin: 24px 0;
+      padding: 12px;
+      border: 2px dashed tomato;
+    }
+    /* EXAMPLE 3: Different sides */
+    .box-three { padding: 8px 20px 16px; margin-left: 12px; background: #f2f2f2; }
+  </style>
+</head>
+<body>
+  <div class="box-one">Box 1: padding and border</div>
+  <div class="box-two">Box 2: margin separates this box from others.</div>
+  <div class="box-three">Box 3: top, horizontal, and bottom padding.</div>
+</body>
+</html>

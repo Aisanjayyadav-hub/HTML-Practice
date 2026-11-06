@@ -1,0 +1,32 @@
+<!doctype html>
+<!-- TOPIC 10: TYPOGRAPHY AND WEB FONTS
+     THEORY:
+     Typography affects readability and hierarchy.
+     Use font-family fallbacks, relative font sizes, line-height, font-weight and text spacing.
+     Keep paragraph line length comfortable and make text contrast clear.
+     External fonts need internet access and may have privacy/performance implications. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Typography</title>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; line-height: 1.7; padding: 2rem; }
+    /* EXAMPLE 1: Type scale */
+    h1 { font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.1; }
+    /* EXAMPLE 2: Weight, spacing and readable width */
+    .intro { font-size: 1.125rem; font-weight: 500; max-width: 65ch; }
+    /* EXAMPLE 3: Text alignment and decoration */
+    .label { letter-spacing: 0.12em; text-transform: uppercase; color: #38598b; }
+    a { text-decoration-thickness: 2px; text-underline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <p class="label">Student learning hub</p>
+  <h1>Make your ideas readable.</h1>
+  <p class="intro">Good typography gives a page rhythm. Choose clear sizes, readable spacing,
+    and a font stack that works even if the preferred font is unavailable.</p>
+  <p><a href="#practice">Jump to practice</a></p>
+  <section id="practice"><h2>Practice</h2><p>Change line-height and max-width, then compare readability.</p></section>
+</body>
+</html>

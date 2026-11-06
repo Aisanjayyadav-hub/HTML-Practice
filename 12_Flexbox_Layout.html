@@ -1,0 +1,46 @@
+<!doctype html>
+<!-- TOPIC 12: FLEXBOX LAYOUT
+     THEORY:
+     Flexbox is a one-dimensional layout system for arranging items in a row or column.
+     The parent uses display:flex. Main-axis alignment uses justify-content; cross-axis
+     alignment uses align-items. gap creates spacing. flex-wrap allows items to wrap.
+     `flex` on children controls how they grow or shrink. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Practice</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 1rem; }
+    .toolbar {
+      display: flex;                 /* Turn the parent into a flex container. */
+      justify-content: space-between;/* Spread children across the main axis. */
+      align-items: center;            /* Align children on the cross axis. */
+      gap: 1rem;
+      flex-wrap: wrap;                /* Prevent overflow on narrow screens. */
+      padding: 1rem;
+      background: #eef3ff;
+    }
+    .logo { font-weight: bold; }
+    .links { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .cards { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
+    .card { flex: 1 1 180px; padding: 1rem; border: 1px solid #bbb; border-radius: 10px; }
+  </style>
+</head>
+<body>
+  <!-- EXAMPLE 1: Responsive navigation row -->
+  <nav class="toolbar">
+    <span class="logo">LearnLab</span>
+    <div class="links"><a href="#home">Home</a><a href="#courses">Courses</a><a href="#contact">Contact</a></div>
+  </nav>
+
+  <!-- EXAMPLE 2: Cards wrap when space is limited -->
+  <section class="cards" id="courses">
+    <article class="card"><h2>HTML</h2><p>Structure your content.</p></article>
+    <article class="card"><h2>CSS</h2><p>Style your content.</p></article>
+    <article class="card"><h2>JavaScript</h2><p>Add interactivity.</p></article>
+  </section>
+
+  <!-- CHALLENGE: Center a card horizontally and vertically using a flex parent. -->
+</body>
+</html>

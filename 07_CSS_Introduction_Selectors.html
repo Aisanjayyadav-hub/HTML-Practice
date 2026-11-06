@@ -1,0 +1,36 @@
+<!doctype html>
+<!-- TOPIC 07: CSS INTRODUCTION AND SELECTORS
+     THEORY:
+     CSS (Cascading Style Sheets) controls how HTML looks.
+     A CSS rule contains a selector and declarations (property: value).
+     Selectors include element (p), class (.note), and ID (#main-title).
+     Class names are reusable; an ID should identify one unique element on the page.
+     The cascade, specificity, and source order help decide which rule wins. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selectors</title>
+  <style>
+    /* EXAMPLE 1: Element selector */
+    body { font-family: Arial, sans-serif; line-height: 1.6; }
+
+    /* EXAMPLE 2: Class selector — can be reused */
+    .highlight { background: #fff2a8; padding: 4px; }
+
+    /* EXAMPLE 3: ID selector — use for a unique element */
+    #main-title { color: #174ea6; }
+
+    /* Descendant selector: paragraphs inside a card */
+    .card p { color: #444; }
+  </style>
+</head>
+<body>
+  <h1 id="main-title">Learning CSS</h1>
+  <p class="highlight">This paragraph uses a class selector.</p>
+  <section class="card">
+    <h2>My first card</h2>
+    <p>This paragraph is styled by the descendant selector.</p>
+  </section>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<!-- TOPIC 11: DISPLAY, POSITION AND Z-INDEX
+     THEORY:
+     `display` determines layout behaviour: block, inline, inline-block, flex, grid, none.
+     `position: relative` keeps an element in normal flow and creates a reference for positioned children.
+     `absolute` positions relative to a containing block; `fixed` is viewport-relative;
+     `sticky` can stick during scrolling. z-index controls stacking within stacking contexts. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display and Position</title>
+  <style>
+    body { font-family: Arial, sans-serif; min-height: 150vh; }
+    /* EXAMPLE 1: Inline, block, inline-block */
+    .block { display: block; background: #e3f2fd; margin: 8px 0; }
+    .inline-block { display: inline-block; background: #dcedc8; padding: 8px; }
+
+    /* EXAMPLE 2: Absolute child inside a relative parent */
+    .parent { position: relative; height: 140px; border: 2px solid #567; margin: 20px 0; }
+    .badge { position: absolute; top: 8px; right: 8px; background: #ffcc80; padding: 6px; }
+
+    /* EXAMPLE 3: Fixed notice stays near viewport bottom */
+    .notice { position: fixed; bottom: 12px; right: 12px; z-index: 10;
+              background: #222; color: white; padding: 10px; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <span class="block">Block element</span>
+  <span class="inline-block">Inline-block element</span>
+  <div class="parent">Relative parent <span class="badge">New</span></div>
+  <p>Scroll the page to observe the fixed notice.</p>
+  <div class="notice">Fixed notice</div>
+</body>
+</html>
